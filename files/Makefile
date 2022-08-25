@@ -1,4 +1,4 @@
-V=2022.08.23
+V=1.1
 
 PREFIX = /usr
 TRUSTED= $(cat kawaii-trusted | cut -d: -f1)
