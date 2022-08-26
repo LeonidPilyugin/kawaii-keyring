@@ -13,7 +13,7 @@ install="$pkgname.install"
 
 package() {
     srcdir=$srcdir/files
-    dir=$pkgdir/usr/sharepacman/keyrings
+    dir=$pkgdir/usr/share/pacman/keyrings
     install -dm755 $dir
 	install -m0755 $srcdir/kawaii{.gpg,-trusted} $dir/
 }
