@@ -1,7 +1,7 @@
 # Maintainer: Leonid Pilyugin  <l.pilyugin04@gmail.com>
 
 pkgname=kawaii-keyring
-pkgver=1.1
+pkgver=1.2
 pkgrel=1
 pkgdesc='Kawaii PGP keyring'
 url='https://github.com/LeonidPilyugin/kawaii-keyring'
@@ -13,7 +13,7 @@ install="$pkgname.install"
 
 package() {
     srcdir=$srcdir/files
-    dir=$pkgdir/usr/sharepacman/keyrings
+    dir=$pkgdir/usr/share/pacman/keyrings
     install -dm755 $dir
 	install -m0755 $srcdir/kawaii{.gpg,-trusted} $dir/
 }
