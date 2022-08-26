@@ -1,7 +1,7 @@
 # Maintainer: Leonid Pilyugin  <l.pilyugin04@gmail.com>
 
 pkgname=kawaii-keyring
-pkgver=1.2
+pkgver=1.1
 pkgrel=1
 pkgdesc='Kawaii PGP keyring'
 url='https://github.com/LeonidPilyugin/kawaii-keyring'
