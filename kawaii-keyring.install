@@ -1,19 +1,9 @@
 post_upgrade() {
-#	/usr/bin/pacman-key --init
-#	/usr/bin/pacman-key -r 2A3CA5307121182B38CFB85B82E083A8DCB489D7
-#	/usr/bin/pacman-key --lsign-key 2A3CA5307121182B38CFB85B82E083A8DCB489D7
-	/usr/bin/pacman-key --populate kawaii
-#	if /usr/bin/pacman-key -l >/dev/null 2>&1; then
-#		/usr/bin/pacman-key --populate kawaii
-#	else
-#		echo " >>> Run \`pacman-key --init\` to set up your pacman keyring."
-#		echo " >>> Then run \`pacman-key --populate kawaii\` to install the kawaii keyring."
-#	fi
-#
+        usr/bin/pacman-key -l A308BDBE10D7C9C168AA2E055F2E4806FFE6B2CD || usr/bin/pacman-key --populate kawaii
 }
 
 post_install() {
-	if [ -x usr/bin/pacman-key ]; then
-		post_upgrade
-	fi
+        if [ -x usr/bin/pacman-key ]; then
+                post_upgrade
+        fi
 }
