@@ -1,7 +1,7 @@
 post_upgrade() {
-	/usr/bin/pacman-key --init
-	/usr/bin/pacman-key -r ED0A8757497B73E4
-	/usr/bin/pacman-key --lsign-key ED0A8757497B73E4
+#	/usr/bin/pacman-key --init
+#	/usr/bin/pacman-key -r 2A3CA5307121182B38CFB85B82E083A8DCB489D7
+#	/usr/bin/pacman-key --lsign-key 2A3CA5307121182B38CFB85B82E083A8DCB489D7
 	/usr/bin/pacman-key --populate kawaii
 #	if /usr/bin/pacman-key -l >/dev/null 2>&1; then
 #		/usr/bin/pacman-key --populate kawaii

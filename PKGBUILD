@@ -8,12 +8,12 @@ url='https://github.com/LeonidPilyugin/kawaii-keyring'
 arch=('x86_64')
 license=('GPL3')
 source=("$pkgname-$pkgver.tar.gz::https://github.com/LeonidPilyugin/$pkgname/releases/download/v$pkgver/files.tar.gz")
-sha256sums=('2a0c658d6762fba93292b328c245024e5caae72a3578fd5a7c58dea11c15ddd3')
+sha256sums=('dc125a0f8cd24d13395eba54d35c11849d70cd269d9c02483fb298517dfe013f')
 install="$pkgname.install"
 
 package() {
     srcdir=$srcdir/files
     dir=$pkgdir/usr/share/pacman/keyrings
     install -dm755 $dir
-	install -m0755 $srcdir/kawaii{.gpg,-trusted} $dir/
+	install -Dm644 $srcdir/kawaii{.gpg,-trusted} $dir/
 }
